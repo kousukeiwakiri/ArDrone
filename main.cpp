@@ -33,6 +33,7 @@ int main(int argc, char **argv)
 	Roll(5 , 1.0);
 	Stop(5);
 	Forward(10 , 10.0);
+	Stop(5);
 	ardrone.landing();
 
 	ardrone.close();
