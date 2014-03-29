@@ -46,8 +46,6 @@ int main(int argc, char **argv)
 void Init(void)
 {
 
-
-
 	// Battery
 	printf("Battery = %d%%\n", ardrone.getBatteryPercentage());
 
@@ -89,7 +87,6 @@ void Forward(int interval_sec , double move_val)
 		time_t now_time = time(NULL);
 		if(now_time - old_time > interval_sec)break;
 	}
-	old_time = time(NULL);
 }
 
 void Roll(int interval_sec , double move_val)
@@ -107,7 +104,6 @@ void Roll(int interval_sec , double move_val)
 		time_t now_time = time(NULL);
 		if(now_time - old_time > interval_sec)break;
 	}
-	old_time = time(NULL);
 }
 
 void Stop(int interval_sec)
@@ -125,7 +121,6 @@ void Stop(int interval_sec)
 		time_t now_time = time(NULL);
 		if(now_time - old_time > interval_sec)break;
 	}
-	old_time = time(NULL);
 }
 
 void MoveVal(int interval_sec , double vx , double vy , double vz , double vr)
@@ -143,7 +138,6 @@ void MoveVal(int interval_sec , double vx , double vy , double vz , double vr)
 		time_t now_time = time(NULL);
 		if(now_time - old_time > interval_sec)break;
 	}
-	old_time = time(NULL);
 }
 
 bool KeyInput(void)
